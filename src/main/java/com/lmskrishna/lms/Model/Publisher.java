@@ -1,23 +1,28 @@
 package com.lmskrishna.lms.Model;
 
-import java.util.Date;
+import java.time.Year;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "publisher")
 public class Publisher {
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "publisherId")
     private int publisherId;
-    @Column(columnDefinition = "Date",name = "yop")
-    private Date yop; //year of publication
+    @Column(name = "yop")
+    private Integer yop; //year of publication
     @Column(name = "publisherName")
     private String publisherName;
     public Publisher() {
     }
-    public Publisher(int publisherId, Date yop, String publisherName) {
+    public Publisher(int publisherId, Integer yop, String publisherName) {
         this.publisherId = publisherId;
         this.yop = yop;
         this.publisherName = publisherName;
@@ -28,10 +33,10 @@ public class Publisher {
     public void setPublisherId(int publisherId) {
         this.publisherId = publisherId;
     }
-    public Date getYop() {
+    public Integer getYop() {
         return yop;
     }
-    public void setYop(Date yop) {
+    public void setYop(Integer yop) {
         this.yop = yop;
     }
     public String getPublisherName() {

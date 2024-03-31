@@ -20,9 +20,13 @@ public class LmsApplication {
 		SpringApplication.run(LmsApplication.class, args);
 	}
 
-@GetMapping("/lms/{message}")
-public String welcomeUser(@PathVariable String message) {
-	return "Welcome in Library management System! "+message;
+// @GetMapping("/lms/{message}")
+// public String welcomeUser(@PathVariable String message) {
+// 	return "Welcome in Library management System! "+message;
+// }
+@GetMapping("/lms/")
+public String welcomeUser() {
+	return "Welcome in Library management System! ";
 }
 
 
