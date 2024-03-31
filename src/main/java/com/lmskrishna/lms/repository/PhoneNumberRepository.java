@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.lmskrishna.lms.Model.PhoneNumber;
 
-public interface PhoneNumberRepository extends JpaRepository<PhoneNumber,Long>{
+public interface PhoneNumberRepository extends JpaRepository<PhoneNumber,Integer>{
     
 }

@@ -30,6 +30,7 @@ public class ReaderController {
         return readerRepository.findAll();
     }
     //Getting the phone number with the help of userid;
+    /* 
     @GetMapping("/lms/getReader/{userId}/phoneNumbers")
     public List<Reader> getPhoneNumbers(@PathVariable Long userId) {
           Optional<Reader> readerOptional = readerRepository.findById(userId);
@@ -39,7 +40,8 @@ public class ReaderController {
     } else {
         throw new EntityNotFoundException("Reader not found with id: " + userId);
     }
-    }
+}
+*/
     
     
     
